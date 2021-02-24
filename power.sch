@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -809,4 +809,62 @@ $EndComp
 Connection ~ 6450 4700
 Wire Wire Line
 	6450 4700 6700 4700
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 606051B8
+P 9800 3600
+F 0 "J?" H 9908 3781 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 9908 3690 50  0000 C CNN
+F 2 "Connector_JST:JST_SH_BM02B-SRSS-TB_1x02-1MP_P1.00mm_Vertical" H 9800 3600 50  0001 C CNN
+F 3 "~" H 9800 3600 50  0001 C CNN
+	1    9800 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2800 10000 3600
+Text GLabel 10000 2800 1    118  Input ~ 0
+VBAT
+Wire Wire Line
+	10000 3700 10000 4400
+$Comp
+L power:GND #PWR?
+U 1 1 606051C1
+P 10000 4400
+F 0 "#PWR?" H 10000 4150 50  0001 C CNN
+F 1 "GND" H 10005 4227 50  0000 C CNN
+F 2 "" H 10000 4400 50  0001 C CNN
+F 3 "" H 10000 4400 50  0001 C CNN
+	1    10000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 606051C7
+P 10600 3600
+F 0 "J?" H 10708 3781 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10708 3690 50  0000 C CNN
+F 2 "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal" H 10600 3600 50  0001 C CNN
+F 3 "~" H 10600 3600 50  0001 C CNN
+	1    10600 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 2800 10800 3600
+Text GLabel 10800 2800 1    118  Input ~ 0
+VBAT
+Wire Wire Line
+	10800 3700 10800 4400
+$Comp
+L power:GND #PWR?
+U 1 1 606051D0
+P 10800 4400
+F 0 "#PWR?" H 10800 4150 50  0001 C CNN
+F 1 "GND" H 10805 4227 50  0000 C CNN
+F 2 "" H 10800 4400 50  0001 C CNN
+F 3 "" H 10800 4400 50  0001 C CNN
+	1    10800 4400
+	1    0    0    -1  
+$EndComp
+Text Notes 9950 2000 0    50   ~ 0
+2 redundant battery connectors.\nconnect only one!
 $EndSCHEMATC
