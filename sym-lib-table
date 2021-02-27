@@ -1,3 +1,7 @@
 (sym_lib_table
   (lib (name basic-rescue)(type Legacy)(uri ${KIPRJMOD}/basic-rescue.lib)(options "")(descr ""))
+  (lib (name aep)(type Legacy)(uri D:/Projects/HardwareLibrary/kicad/lib/aep.lib)(options "")(descr ""))
+  (lib (name SparkFun-Sensors)(type Legacy)(uri D:/Projects/HardwareLibrary/kicad-ext/SparkFun-KiCad-Libraries/Libraries/SparkFun-Sensors.lib)(options "")(descr ""))
+  (lib (name OLIMEX_Connectors)(type Legacy)(uri D:/Projects/HardwareLibrary/kicad-ext/KiCAD/KiCAD_Components/OLIMEX_Connectors.lib)(options "")(descr ""))
+  (lib (name SparkFun-Clocks)(type Legacy)(uri D:/Projects/HardwareLibrary/kicad-ext/SparkFun-KiCad-Libraries/Libraries/SparkFun-Clocks.lib)(options "")(descr ""))
 )
