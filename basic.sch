@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title ""
 Date ""
 Rev ""
@@ -25,13 +25,13 @@ F 3 "~" H 12250 10300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10600 3800 10400 3800
+	2850 3500 2650 3500
 Wire Wire Line
-	9700 3900 9900 3900
-Text GLabel 10650 3900 2    50   Input ~ 0
+	1950 3600 2150 3600
+Text GLabel 2900 3600 2    50   Input ~ 0
 CAN0+
 Wire Wire Line
-	10400 3900 10650 3900
+	2650 3600 2900 3600
 $Comp
 L Mechanical:Fiducial FID2
 U 1 1 5E789C24
@@ -44,669 +44,32 @@ F 3 "~" H 13450 10350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9700 3800 9900 3800
-Text GLabel 10600 3800 2    50   Input ~ 0
+	1950 3500 2150 3500
+Text GLabel 2850 3500 2    50   Input ~ 0
 BATT+
 $Comp
 L Connector_Generic:Conn_02x02_Top_Bottom J5
 U 1 1 5E789BF0
-P 10100 3800
-F 0 "J5" H 10150 4017 50  0000 C CNN
-F 1 "Conn_02x02_Top_Bottom" H 10150 3926 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal" H 10100 3800 50  0001 C CNN
-F 3 "~" H 10100 3800 50  0001 C CNN
-	1    10100 3800
+P 2350 3500
+F 0 "J5" H 2400 3717 50  0000 C CNN
+F 1 "Conn_02x02_Top_Bottom" H 2400 3626 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal" H 2350 3500 50  0001 C CNN
+F 3 "~" H 2350 3500 50  0001 C CNN
+	1    2350 3500
 	1    0    0    -1  
 $EndComp
-Text GLabel 9700 3800 0    50   Input ~ 0
+Text GLabel 1950 3500 0    50   Input ~ 0
 BATT-
-Text GLabel 9700 3900 0    50   Input ~ 0
+Text GLabel 1950 3600 0    50   Input ~ 0
 CAN0-
 Text Notes 950  -850 0    197  ~ 0
 TODO\n\n- breakout modem signals\n- TI  DCDC might need to be set to 3.4V, check datasheets of all the stuff\n- MCP73223 UVLO is too low?\n- OPAMP for sense
 $Sheet
-S 6950 1000 950  900 
+S 4000 2000 1000 1000
 U 60856F71
 F0 "power" 50
 F1 "power.sch" 50
 $EndSheet
-Text GLabel 3950 4200 2    50   Input ~ 0
-MODEM_RESET
-Text GLabel 3950 4000 2    50   Input ~ 0
-MODEM_DTR
-Text GLabel 3950 4100 2    50   Input ~ 0
-MODEM_WDISABLE
-Text GLabel 3950 3800 2    50   Input ~ 0
-CHARGE_STAT
-$Comp
-L Device:R R4
-U 1 1 60396510
-P 2050 2300
-F 0 "R4" V 2050 2350 50  0000 C CNN
-F 1 "R0" V 2050 2250 50  0000 C CNN
-F 2 "Resistors:0603" V 1980 2300 50  0001 C CNN
-F 3 "~" H 2050 2300 50  0001 C CNN
-	1    2050 2300
-	0    -1   -1   0   
-$EndComp
-Text GLabel 3950 3100 2    50   Input ~ 0
-MODEM_TX
-Text GLabel 3950 3200 2    50   Input ~ 0
-MODEM_RX
-Text GLabel 3950 3000 2    50   Input ~ 0
-CS0
-Text GLabel 3950 3700 2    50   Input ~ 0
-IMU_INT1
-Text GLabel 3950 3600 2    50   Input ~ 0
-TWI0_SCK
-Text GLabel 3950 3500 2    50   Input ~ 0
-TWI0_SDA
-Text GLabel 3950 2900 2    50   Input ~ 0
-SCLK
-Text GLabel 3950 2700 2    50   Input ~ 0
-MISO
-Text GLabel 3950 3300 2    50   Input ~ 0
-CAN0IRQ
-Text GLabel 3950 2800 2    50   Input ~ 0
-MOSI
-$Comp
-L Device:LED D1
-U 1 1 6058E709
-P 5000 6600
-F 0 "D1" H 4993 6816 50  0000 C CNN
-F 1 "APGA1602QBC/KA-5MAV" H 4993 6725 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5000 6600 50  0001 C CNN
-F 3 "~" H 5000 6600 50  0001 C CNN
-	1    5000 6600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D4
-U 1 1 6058E70F
-P 5300 6600
-F 0 "D4" H 5293 6816 50  0000 C CNN
-F 1 "APGA1602CGC/KA" H 5293 6725 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5300 6600 50  0001 C CNN
-F 3 "~" H 5300 6600 50  0001 C CNN
-	1    5300 6600
-	0    -1   -1   0   
-$EndComp
-Text GLabel 5000 5900 1    118  Input ~ 0
-3.3V
-$Comp
-L Device:R R1
-U 1 1 6058E716
-P 5000 6200
-F 0 "R1" H 5070 6246 50  0000 L CNN
-F 1 "1K" H 5070 6155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4930 6200 50  0001 C CNN
-F 3 "~" H 5000 6200 50  0001 C CNN
-	1    5000 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5000 6350 5000 6450
-$Comp
-L Device:R R2
-U 1 1 6058E71D
-P 5300 6200
-F 0 "R2" H 5370 6246 50  0000 L CNN
-F 1 "1K" H 5370 6155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5230 6200 50  0001 C CNN
-F 3 "~" H 5300 6200 50  0001 C CNN
-	1    5300 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 6350 5300 6450
-Text GLabel 5300 5900 1    118  Input ~ 0
-3.3V
-Wire Wire Line
-	5300 5900 5300 6050
-Wire Wire Line
-	5000 5900 5000 6050
-Text GLabel 5300 6900 3    50   Input ~ 0
-LED_GREEN
-Wire Wire Line
-	5300 6900 5300 6750
-Text GLabel 5000 6900 3    50   Input ~ 0
-LED_BLUE
-Wire Wire Line
-	5000 6750 5000 6900
-Text GLabel 3950 4300 2    50   Input ~ 0
-LED_GREEN
-Text GLabel 3950 4400 2    50   Input ~ 0
-LED_BLUE
-$Comp
-L Device:R R19
-U 1 1 606E9824
-P 1700 3750
-F 0 "R19" V 1800 3750 50  0000 C CNN
-F 1 "22K" V 1550 3750 50  0000 C CNN
-F 2 "Resistors:0603" V 1630 3750 50  0001 C CNN
-F 3 "~" H 1700 3750 50  0001 C CNN
-	1    1700 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 606E982A
-P 1600 4550
-F 0 "#PWR0101" H 1600 4300 50  0001 C CNN
-F 1 "GND" H 1605 4377 50  0000 C CNN
-F 2 "" H 1600 4550 50  0001 C CNN
-F 3 "" H 1600 4550 50  0001 C CNN
-	1    1600 4550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1600 4550 1700 4550
-Wire Wire Line
-	1700 4550 1700 4450
-Wire Wire Line
-	1700 3350 1700 3600
-Text GLabel 1700 3350 1    118  Input ~ 0
-VBAT
-$Comp
-L Device:R R20
-U 1 1 606E9834
-P 1700 4300
-F 0 "R20" V 1800 4300 50  0000 C CNN
-F 1 "5K" V 1550 4300 50  0000 C CNN
-F 2 "Resistors:0603" V 1630 4300 50  0001 C CNN
-F 3 "~" H 1700 4300 50  0001 C CNN
-	1    1700 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1700 3900 1700 4050
-Connection ~ 1700 4050
-Wire Wire Line
-	1700 4050 1700 4150
-$Comp
-L Device:R R21
-U 1 1 606E9840
-P 1700 5750
-F 0 "R21" V 1800 5750 50  0000 C CNN
-F 1 "22K" V 1550 5750 50  0000 C CNN
-F 2 "Resistors:0603" V 1630 5750 50  0001 C CNN
-F 3 "~" H 1700 5750 50  0001 C CNN
-	1    1700 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 606E9846
-P 1600 6550
-F 0 "#PWR0102" H 1600 6300 50  0001 C CNN
-F 1 "GND" H 1605 6377 50  0000 C CNN
-F 2 "" H 1600 6550 50  0001 C CNN
-F 3 "" H 1600 6550 50  0001 C CNN
-	1    1600 6550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1600 6550 1700 6550
-Wire Wire Line
-	1700 6550 1700 6450
-$Comp
-L Device:R R22
-U 1 1 606E984E
-P 1700 6300
-F 0 "R22" V 1800 6300 50  0000 C CNN
-F 1 "5K" V 1550 6300 50  0000 C CNN
-F 2 "Resistors:0603" V 1630 6300 50  0001 C CNN
-F 3 "~" H 1700 6300 50  0001 C CNN
-	1    1700 6300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1700 5900 1700 6050
-Wire Wire Line
-	1150 6050 1700 6050
-Connection ~ 1700 6050
-Wire Wire Line
-	1700 6050 1700 6150
-Text GLabel 1700 5300 1    50   Input ~ 0
-V12_safe
-Wire Wire Line
-	1700 5300 1700 5600
-Text GLabel 650  4050 0    50   Input ~ 0
-SENSE_VBAT
-Wire Wire Line
-	650  4050 1000 4050
-Text GLabel 600  6050 0    50   Input ~ 0
-SENSE_V12
-Text GLabel 3600 2500 2    50   Input ~ 0
-SENSE_VBAT
-Text GLabel 1600 2400 0    50   Input ~ 0
-SENSE_V12
-Text GLabel 3950 3900 2    50   Input ~ 0
-MODEM_RELAIS
-Text Notes 3050 1450 0    50   ~ 0
-MIN 3.0V\nTYP 3.3\nMAX 3.6 
-$Comp
-L aep:SW_Push SW?
-U 1 1 603D70E5
-P 3800 6400
-AR Path="/603D0BBC/603D70E5" Ref="SW?"  Part="1" 
-AR Path="/603D70E5" Ref="SW1"  Part="1" 
-F 0 "SW1" H 3800 6685 50  0000 C CNN
-F 1 "SW_Push" H 3800 6594 50  0000 C CNN
-F 2 "aep:SW_1825027-5" H 3800 6600 50  0001 C CNN
-F 3 "~" H 3800 6600 50  0001 C CNN
-	1    3800 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 603D70EB
-P 4000 6800
-AR Path="/603D0BBC/603D70EB" Ref="#PWR?"  Part="1" 
-AR Path="/603D70EB" Ref="#PWR0117"  Part="1" 
-F 0 "#PWR0117" H 4000 6550 50  0001 C CNN
-F 1 "GND" H 4005 6627 50  0000 C CNN
-F 2 "" H 4000 6800 50  0001 C CNN
-F 3 "" H 4000 6800 50  0001 C CNN
-	1    4000 6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4000 6400 4000 6600
-Wire Wire Line
-	3900 6700 4000 6700
-Connection ~ 4000 6700
-Wire Wire Line
-	4000 6700 4000 6800
-Wire Wire Line
-	3900 6600 4000 6600
-Connection ~ 4000 6600
-Wire Wire Line
-	4000 6600 4000 6700
-$Comp
-L Device:C C?
-U 1 1 603D70F8
-P 1900 1450
-AR Path="/603D0BBC/603D70F8" Ref="C?"  Part="1" 
-AR Path="/603D70F8" Ref="C1"  Part="1" 
-F 0 "C1" H 2015 1496 50  0000 L CNN
-F 1 "2.2uF" H 2015 1405 50  0000 L CNN
-F 2 "Capacitors:0603" H 1938 1300 50  0001 C CNN
-F 3 "~" H 1900 1450 50  0001 C CNN
-	1    1900 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 1250 1900 1300
-$Comp
-L power:GND #PWR?
-U 1 1 603D70FF
-P 1900 1700
-AR Path="/603D0BBC/603D70FF" Ref="#PWR?"  Part="1" 
-AR Path="/603D70FF" Ref="#PWR0118"  Part="1" 
-F 0 "#PWR0118" H 1900 1450 50  0001 C CNN
-F 1 "GND" H 1905 1527 50  0000 C CNN
-F 2 "" H 1900 1700 50  0001 C CNN
-F 3 "" H 1900 1700 50  0001 C CNN
-	1    1900 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 1700 1900 1600
-Wire Wire Line
-	1900 1250 2250 1250
-Connection ~ 2900 1250
-Wire Wire Line
-	2900 1250 2900 1900
-Text GLabel 3950 3400 2    50   Input ~ 0
-softreset
-Text GLabel 3350 6400 0    50   Input ~ 0
-softreset
-Wire Wire Line
-	3350 6400 3600 6400
-$Comp
-L power:GND #PWR?
-U 1 1 603D7112
-P 2900 4800
-AR Path="/603D0BBC/603D7112" Ref="#PWR?"  Part="1" 
-AR Path="/603D7112" Ref="#PWR0119"  Part="1" 
-F 0 "#PWR0119" H 2900 4550 50  0001 C CNN
-F 1 "GND" H 2905 4627 50  0000 C CNN
-F 2 "" H 2900 4800 50  0001 C CNN
-F 3 "" H 2900 4800 50  0001 C CNN
-	1    2900 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2900 4800 2900 4700
-$Comp
-L Transistor_BJT:MBT3904DW1 Q?
-U 1 1 603D7121
-P 6900 4650
-AR Path="/603D0BBC/603D7121" Ref="Q?"  Part="1" 
-AR Path="/603D7121" Ref="Q3"  Part="1" 
-F 0 "Q3" H 7091 4696 50  0000 L CNN
-F 1 "MBT3904DW1" H 7091 4605 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 7100 4750 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/MBT3904DW1T1-D.PDF" H 6900 4650 50  0001 C CNN
-	1    6900 4650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:MBT3904DW1 Q?
-U 2 1 603D7127
-P 6900 5300
-AR Path="/603D0BBC/603D7127" Ref="Q?"  Part="2" 
-AR Path="/603D7127" Ref="Q3"  Part="2" 
-F 0 "Q3" H 7091 5254 50  0000 L CNN
-F 1 "MBT3904DW1" H 7091 5345 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 7100 5400 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/MBT3904DW1T1-D.PDF" H 6900 5300 50  0001 C CNN
-	2    6900 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 603D712D
-P 7550 5300
-AR Path="/603D0BBC/603D712D" Ref="R?"  Part="1" 
-AR Path="/603D712D" Ref="R24"  Part="1" 
-F 0 "R24" H 7620 5346 50  0000 L CNN
-F 1 "10K" H 7620 5255 50  0000 L CNN
-F 2 "Resistors:0603" V 7480 5300 50  0001 C CNN
-F 3 "~" H 7550 5300 50  0001 C CNN
-	1    7550 5300
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	7100 5300 7400 5300
-$Comp
-L Device:R R?
-U 1 1 603D7134
-P 7550 4650
-AR Path="/603D0BBC/603D7134" Ref="R?"  Part="1" 
-AR Path="/603D7134" Ref="R23"  Part="1" 
-F 0 "R23" H 7620 4696 50  0000 L CNN
-F 1 "10K" H 7620 4605 50  0000 L CNN
-F 2 "Resistors:0603" V 7480 4650 50  0001 C CNN
-F 3 "~" H 7550 4650 50  0001 C CNN
-	1    7550 4650
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	7100 4650 7400 4650
-Wire Wire Line
-	6800 4850 6800 4900
-Wire Wire Line
-	6800 4900 8000 4900
-Wire Wire Line
-	8000 4900 8000 5300
-Wire Wire Line
-	8000 5300 7700 5300
-Wire Wire Line
-	6800 5100 6800 5050
-Wire Wire Line
-	6800 5050 7950 5050
-Wire Wire Line
-	7950 5050 7950 4650
-Wire Wire Line
-	7950 4650 7700 4650
-Connection ~ 7950 4650
-Connection ~ 8000 5300
-Text GLabel 8300 4650 2    50   Input ~ 0
-FTDI_DTR
-Wire Wire Line
-	7950 4650 8300 4650
-Text GLabel 8300 5300 2    50   Input ~ 0
-FTDI_CTS
-Wire Wire Line
-	8000 5300 8300 5300
-Text GLabel 6700 4300 0    50   Input ~ 0
-CPU_ENABLE
-Wire Wire Line
-	6700 4300 6800 4300
-Wire Wire Line
-	6800 4300 6800 4450
-Text GLabel 6750 5650 0    50   Input ~ 0
-CPU_BOOT
-Wire Wire Line
-	6750 5650 6800 5650
-Wire Wire Line
-	6800 5650 6800 5500
-Text GLabel 2100 2100 0    50   Input ~ 0
-CPU_ENABLE
-Text GLabel 3600 2100 2    50   Input ~ 0
-CPU_BOOT
-Wire Wire Line
-	3600 2100 3500 2100
-Text GLabel 3600 2400 2    50   Input ~ 0
-FTDI_TXD
-Text GLabel 3600 2200 2    50   Input ~ 0
-FTDI_RXD
-Wire Wire Line
-	3600 2200 3500 2200
-Wire Wire Line
-	3500 2400 3600 2400
-Wire Wire Line
-	2100 2100 2250 2100
-$Comp
-L Device:R R?
-U 1 1 603D7157
-P 2250 1850
-AR Path="/603D0BBC/603D7157" Ref="R?"  Part="1" 
-AR Path="/603D7157" Ref="R26"  Part="1" 
-F 0 "R26" H 2320 1896 50  0000 L CNN
-F 1 "10K" H 2320 1805 50  0000 L CNN
-F 2 "Resistors:0603" V 2180 1850 50  0001 C CNN
-F 3 "~" H 2250 1850 50  0001 C CNN
-	1    2250 1850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2250 2000 2250 2100
-Connection ~ 2250 2100
-Wire Wire Line
-	2250 2100 2300 2100
-Wire Wire Line
-	2250 1700 2250 1250
-Connection ~ 2250 1250
-Wire Wire Line
-	2250 1250 2900 1250
-Text GLabel 7950 3100 2    50   Input ~ 0
-FTDI_RXD
-Text GLabel 7950 3250 2    50   Input ~ 0
-FTDI_TXD
-Text GLabel 7950 3400 2    50   Input ~ 0
-FTDI_DTR
-Text GLabel 6700 3250 0    50   Input ~ 0
-FTDI_CTS
-Wire Wire Line
-	3950 3400 3500 3400
-Wire Wire Line
-	3500 3100 3950 3100
-Wire Wire Line
-	3950 3200 3500 3200
-Wire Wire Line
-	3500 3600 3950 3600
-Wire Wire Line
-	3950 3700 3500 3700
-Wire Wire Line
-	3500 3500 3950 3500
-Wire Wire Line
-	3950 3000 3500 3000
-Wire Wire Line
-	3500 2700 3950 2700
-Wire Wire Line
-	3500 2800 3950 2800
-Wire Wire Line
-	3950 2900 3500 2900
-NoConn ~ 2300 3800
-NoConn ~ 2300 3700
-NoConn ~ 2300 3600
-NoConn ~ 2300 3500
-NoConn ~ 2300 3400
-NoConn ~ 2300 3300
-Text Notes 4450 2850 0    50   ~ 0
-HSPI
-Text Notes 4550 3150 0    50   ~ 0
-UART2
-NoConn ~ 3500 2300
-NoConn ~ 3500 2600
-Wire Wire Line
-	3950 3300 3500 3300
-Wire Wire Line
-	3500 4000 3950 4000
-Wire Wire Line
-	3950 3900 3500 3900
-Wire Wire Line
-	3500 3800 3950 3800
-Wire Wire Line
-	3500 4100 3950 4100
-Wire Wire Line
-	3500 4200 3950 4200
-Wire Wire Line
-	3600 2500 3500 2500
-Text GLabel 1600 2300 0    50   Input ~ 0
-SENSE_VBAT
-$Comp
-L Device:C C3
-U 1 1 60B842FB
-P 1000 4250
-F 0 "C3" V 748 4250 50  0000 C CNN
-F 1 "100nF" V 839 4250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1038 4100 50  0001 C CNN
-F 3 "~" H 1000 4250 50  0001 C CNN
-	1    1000 4250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1000 4100 1000 4050
-Connection ~ 1000 4050
-Wire Wire Line
-	1000 4050 1700 4050
-$Comp
-L power:GND #PWR0120
-U 1 1 60B9E6F9
-P 1000 4550
-F 0 "#PWR0120" H 1000 4300 50  0001 C CNN
-F 1 "GND" H 1005 4377 50  0000 C CNN
-F 2 "" H 1000 4550 50  0001 C CNN
-F 3 "" H 1000 4550 50  0001 C CNN
-	1    1000 4550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1000 4550 1000 4400
-$Comp
-L Device:C C4
-U 1 1 60BB8BA5
-P 1150 6300
-F 0 "C4" V 898 6300 50  0000 C CNN
-F 1 "100nF" V 989 6300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1188 6150 50  0001 C CNN
-F 3 "~" H 1150 6300 50  0001 C CNN
-	1    1150 6300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0124
-U 1 1 60BB8BAB
-P 1150 6600
-F 0 "#PWR0124" H 1150 6350 50  0001 C CNN
-F 1 "GND" H 1155 6427 50  0000 C CNN
-F 2 "" H 1150 6600 50  0001 C CNN
-F 3 "" H 1150 6600 50  0001 C CNN
-	1    1150 6600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1150 6600 1150 6450
-Wire Wire Line
-	1150 6150 1150 6050
-Wire Wire Line
-	1150 6050 600  6050
-$Comp
-L Device:R R25
-U 1 1 60E8E094
-P 2050 2400
-F 0 "R25" V 2050 2450 50  0000 C CNN
-F 1 "R0" V 2050 2350 50  0000 C CNN
-F 2 "Resistors:0603" V 1980 2400 50  0001 C CNN
-F 3 "~" H 2050 2400 50  0001 C CNN
-	1    2050 2400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1600 2300 1900 2300
-Wire Wire Line
-	2200 2300 2300 2300
-Wire Wire Line
-	2300 2400 2200 2400
-Wire Wire Line
-	1600 2400 1900 2400
-$Comp
-L RF_Module:ESP32-WROOM-32U U1
-U 1 1 60F54B32
-P 2900 3300
-F 0 "U1" H 2900 4881 50  0000 C CNN
-F 1 "ESP32-WROOM-32U" H 2900 4790 50  0000 C CNN
-F 2 "RF_Module:ESP32-WROOM-32U" H 2900 1800 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 2600 3350 50  0001 C CNN
-	1    2900 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3950 4300 3500 4300
-Wire Wire Line
-	3500 4400 3950 4400
-$Comp
-L aep:TC2030_SWD U9
-U 1 1 61403932
-P 7300 3250
-F 0 "U9" H 7350 3665 50  0000 C CNN
-F 1 "TC2030_SWD" H 7350 3574 50  0000 C CNN
-F 2 "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical" H 7250 3500 50  0001 C CNN
-F 3 "" H 7250 3500 50  0001 C CNN
-	1    7300 3250
-	1    0    0    -1  
-$EndComp
-Text GLabel 2900 1000 1    118  Input ~ 0
-3.3V
-Wire Wire Line
-	2900 1000 2900 1250
-Text GLabel 6550 2950 0    118  Input ~ 0
-3.3V
-Wire Wire Line
-	6550 2950 6700 2950
-Wire Wire Line
-	6700 2950 6700 3100
-Wire Wire Line
-	6700 3100 6850 3100
-$Comp
-L power:GND #PWR?
-U 1 1 6146FC8D
-P 6700 3450
-AR Path="/603D0BBC/6146FC8D" Ref="#PWR?"  Part="1" 
-AR Path="/6146FC8D" Ref="#PWR0116"  Part="1" 
-F 0 "#PWR0116" H 6700 3200 50  0001 C CNN
-F 1 "GND" H 6705 3277 50  0000 C CNN
-F 2 "" H 6700 3450 50  0001 C CNN
-F 3 "" H 6700 3450 50  0001 C CNN
-	1    6700 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 3450 6700 3400
-Wire Wire Line
-	6700 3400 6850 3400
-Wire Wire Line
-	7950 3250 7850 3250
-Wire Wire Line
-	7850 3100 7950 3100
-Wire Wire Line
-	7950 3400 7850 3400
-Wire Wire Line
-	6700 3250 6850 3250
 $Comp
 L aep:dummy X1
 U 1 1 6202ADD4
@@ -730,22 +93,30 @@ F 3 "" H 15150 10250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 9050 1000 950  900 
+S 4000 4000 1000 1000
 U 603BB897
 F0 "canbus" 50
 F1 "canbus.sch" 50
 $EndSheet
 $Sheet
-S 10050 1000 850  900 
+S 7500 4000 1000 1000
 U 6055B0F2
 F0 "modem" 50
 F1 "modem.sch" 50
 $EndSheet
 $Sheet
-S 8000 1000 900  900 
+S 7500 2000 1000 1000
 U 606146CD
 F0 "mmu" 50
 F1 "mmu.sch" 50
+F2 "TWIO_SCK" B L 7500 2400 50 
+F3 "TWIO_SDA" B L 7500 2500 50 
+F4 "IMU_INT1" B L 7500 2600 50 
 $EndSheet
-Connection ~ 1150 6050
+$Sheet
+S 5500 3000 1000 1000
+U 603B75FA
+F0 "esp32" 50
+F1 "esp32.sch" 50
+$EndSheet
 $EndSCHEMATC
