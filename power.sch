@@ -34,10 +34,6 @@ Wire Wire Line
 	1700 2100 1400 2100
 Wire Wire Line
 	1700 2300 1400 2300
-Text GLabel 1400 2300 0    118  Input ~ 0
-BATT-
-Text GLabel 1400 2100 0    118  Input ~ 0
-BATT+
 Wire Wire Line
 	6900 5000 6900 5150
 $Comp
@@ -867,4 +863,6 @@ F 3 "" H 10800 4400 50  0001 C CNN
 $EndComp
 Text Notes 9950 2000 0    50   ~ 0
 2 redundant battery connectors.\nconnect only one!
+Text GLabel 1250 2100 0    50   Input ~ 0
+VIN_12V
 $EndSCHEMATC
