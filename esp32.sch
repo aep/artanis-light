@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -52,10 +52,6 @@ F 3 "~" H 10250 4550 50  0001 C CNN
 	1    10250 4550
 	1    0    0    -1  
 $EndComp
-Text GLabel 9400 3100 0    50   Input ~ 0
-SENSE_VBAT
-Text GLabel 9400 4850 0    50   Input ~ 0
-SENSE_V12
 $Comp
 L Device:C C?
 U 1 1 603DB65B
@@ -114,14 +110,6 @@ Wire Wire Line
 	2300 6000 2400 6000
 Wire Wire Line
 	2300 6350 2400 6350
-Text GLabel 2850 6350 2    50   Input ~ 0
-LED_GREEN
-Wire Wire Line
-	2850 6350 2700 6350
-Text GLabel 2850 6000 2    50   Input ~ 0
-LED_BLUE
-Wire Wire Line
-	2700 6000 2850 6000
 $Comp
 L aep:SW_Push SW?
 U 1 1 603E35B6
@@ -309,31 +297,19 @@ Wire Wire Line
 	7700 3100 7600 3100
 Wire Wire Line
 	6450 2950 6600 2950
-Text GLabel 4750 4700 2    50   Input ~ 0
-MODEM_RESET
-Text GLabel 4750 4500 2    50   Input ~ 0
-MODEM_DTR
-Text GLabel 4750 4600 2    50   Input ~ 0
-MODEM_WDISABLE
 $Comp
 L Device:R R?
 U 1 1 603F64E1
-P 2500 2800
+P 4500 3000
 AR Path="/603F64E1" Ref="R?"  Part="1" 
 AR Path="/603B75FA/603F64E1" Ref="R?"  Part="1" 
-F 0 "R?" V 2550 3000 50  0000 C CNN
-F 1 "R0" V 2550 2600 50  0000 C CNN
-F 2 "Resistors:0603" V 2430 2800 50  0001 C CNN
-F 3 "~" H 2500 2800 50  0001 C CNN
-	1    2500 2800
-	0    -1   -1   0   
+F 0 "R?" V 4550 3200 50  0000 C CNN
+F 1 "R0" V 4550 2800 50  0000 C CNN
+F 2 "Resistors:0603" V 4430 3000 50  0001 C CNN
+F 3 "~" H 4500 3000 50  0001 C CNN
+	1    4500 3000
+	0    1    1    0   
 $EndComp
-Text GLabel 4200 3000 2    50   Input ~ 0
-SENSE_VBAT
-Text GLabel 2050 2900 0    50   Input ~ 0
-SENSE_V12
-Text GLabel 4750 4400 2    50   Input ~ 0
-MODEM_RELAIS
 Text Notes 3100 2150 0    50   ~ 0
 MIN 3.0V\nTYP 3.3\nMAX 3.6 
 $Comp
@@ -429,10 +405,10 @@ NoConn ~ 2900 4100
 NoConn ~ 2900 4000
 NoConn ~ 2900 3900
 NoConn ~ 2900 3800
-Text Notes 4900 3400 0    50   ~ 0
+Text Notes 4900 3250 3    50   ~ 0
 HSPI
-Text Notes 5050 3650 0    50   ~ 0
-UART2
+Text Notes 4150 3600 0    50   ~ 0
+U2_RXD
 NoConn ~ 4100 2800
 NoConn ~ 4100 3100
 Wire Wire Line
@@ -447,10 +423,6 @@ Wire Wire Line
 	4100 4600 4550 4600
 Wire Wire Line
 	4100 4700 4550 4700
-Wire Wire Line
-	4200 3000 4100 3000
-Text GLabel 2050 2800 0    50   Input ~ 0
-SENSE_VBAT
 $Comp
 L Device:R R?
 U 1 1 603F6540
@@ -464,10 +436,6 @@ F 3 "~" H 2500 2900 50  0001 C CNN
 	1    2500 2900
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2050 2800 2350 2800
-Wire Wire Line
-	2050 2900 2350 2900
 $Comp
 L RF_Module:ESP32-WROOM-32U U?
 U 1 1 603F654A
@@ -489,12 +457,8 @@ Text HLabel 4550 4100 2    50   BiDi ~ 0
 TWIO_SCK
 Text HLabel 4550 4000 2    50   BiDi ~ 0
 TWIO_SDA
-Text HLabel 4550 4200 2    50   BiDi ~ 0
+Text HLabel 4550 4200 2    50   Input ~ 0
 IMU_INT1
-Text GLabel 4550 4900 2    50   Input ~ 0
-LED_BLUE
-Text GLabel 4550 4800 2    50   Input ~ 0
-LED_GREEN
 $Comp
 L Device:R R?
 U 1 1 6044C2F7
@@ -564,8 +528,6 @@ Wire Wire Line
 	10250 3100 10250 3150
 Wire Wire Line
 	9800 3100 9550 3100
-Wire Wire Line
-	9400 3100 9550 3100
 Connection ~ 9550 3100
 $Comp
 L Device:R R?
@@ -647,8 +609,6 @@ Wire Wire Line
 	10250 4850 10250 4900
 Wire Wire Line
 	9800 4850 9550 4850
-Wire Wire Line
-	9400 4850 9550 4850
 Connection ~ 9550 4850
 $Comp
 L Device:C C?
@@ -818,7 +778,7 @@ Wire Wire Line
 	10250 4350 10250 4400
 Text HLabel 4550 3600 2    50   Input ~ 0
 MODEM_TX
-Text HLabel 4550 3700 2    50   Input ~ 0
+Text HLabel 4550 3700 2    50   Output ~ 0
 MODEM_RX
 Text HLabel 4550 3800 2    50   Input ~ 0
 CAN0IRQ
@@ -834,4 +794,48 @@ Text HLabel 4550 3400 2    50   Output ~ 0
 SCLK
 Text HLabel 4550 3500 2    50   Output ~ 0
 CSO
+Text Notes 4150 3700 0    50   ~ 0
+U2_TXD
+Text HLabel 4550 4400 2    50   Output ~ 0
+MODEM_RELAIS
+Text HLabel 4550 4500 2    50   Output ~ 0
+MODEM_DTR
+Text HLabel 4550 4600 2    50   Output ~ 0
+MODEM_WDISABLE
+Text HLabel 4550 4700 2    50   Output ~ 0
+MODEM_RESET
+Text Label 4100 4800 0    50   ~ 0
+LED_GREEN
+Text Label 4100 4900 0    50   ~ 0
+LED_BLUE
+Text Label 2850 6000 0    50   ~ 0
+LED_GREEN
+Wire Wire Line
+	2700 6000 3300 6000
+Wire Wire Line
+	2700 6350 3300 6350
+Text Label 2850 6350 0    50   ~ 0
+LED_BLUE
+Text Label 1600 2800 0    50   ~ 0
+SENSE_VBAT
+Wire Wire Line
+	1600 2800 2350 2800
+Text Label 1600 2900 0    50   ~ 0
+SENSE_V12
+Wire Wire Line
+	1600 2900 2350 2900
+Text Label 8950 3100 0    50   ~ 0
+SENSE_VBAT
+Text Label 9000 4850 0    50   ~ 0
+SENSE_V12
+Wire Wire Line
+	8950 3100 9550 3100
+Wire Wire Line
+	9000 4850 9550 4850
+Text Label 4750 3000 0    50   ~ 0
+SENSE_VBAT
+Wire Wire Line
+	4100 3000 4350 3000
+Wire Wire Line
+	4650 3000 5200 3000
 $EndSCHEMATC

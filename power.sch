@@ -865,4 +865,26 @@ Text Notes 9950 2000 0    50   ~ 0
 2 redundant battery connectors.\nconnect only one!
 Text GLabel 1250 2100 0    50   Input ~ 0
 VIN_12V
+$Comp
+L Regulator_Switching:AP63203WU U?
+U 1 1 604E2EDE
+P 1400 3500
+F 0 "U?" H 1400 3867 50  0000 C CNN
+F 1 "AP63203WU" H 1400 3776 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 1400 2600 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf" H 1400 3500 50  0001 C CNN
+	1    1400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:AP63203WU U?
+U 1 1 6069DD08
+P 8500 4000
+F 0 "U?" H 8500 4367 50  0000 C CNN
+F 1 "AP63203WU" H 8500 4276 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 8500 3100 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf" H 8500 4000 50  0001 C CNN
+	1    8500 4000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
