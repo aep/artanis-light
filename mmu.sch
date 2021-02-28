@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -210,7 +210,7 @@ Text HLabel 7400 3600 2    50   BiDi ~ 0
 TWIO_SCK
 Text HLabel 7400 3700 2    50   BiDi ~ 0
 TWIO_SDA
-Text HLabel 7400 4000 2    50   BiDi ~ 0
+Text HLabel 7400 4000 2    50   Output ~ 0
 IMU_INT1
 $Comp
 L Device:C C?
