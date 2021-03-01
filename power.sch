@@ -1338,44 +1338,14 @@ F 3 "" H 2150 5800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2500 5800 2450 5800
-$Comp
-L Device:R R?
-U 1 1 60849489
-P 2050 6300
-AR Path="/60849489" Ref="R?"  Part="1" 
-AR Path="/606146CD/60849489" Ref="R?"  Part="1" 
-AR Path="/60856F71/60849489" Ref="R2"  Part="1" 
-F 0 "R2" H 1900 6250 50  0000 C CNN
-F 1 "10k" H 1900 6350 50  0000 C CNN
-F 2 "Resistors:0603" V 1980 6300 50  0001 C CNN
-F 3 "~" H 2050 6300 50  0001 C CNN
-	1    2050 6300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 60849483
-P 2050 6300
-AR Path="/60849483" Ref="R?"  Part="1" 
-AR Path="/606146CD/60849483" Ref="R?"  Part="1" 
-AR Path="/60856F71/60849483" Ref="R1"  Part="1" 
-F 0 "R1" H 1900 6250 50  0000 C CNN
-F 1 "10k" H 1900 6350 50  0000 C CNN
-F 2 "Resistors:0603" V 1980 6300 50  0001 C CNN
-F 3 "~" H 2050 6300 50  0001 C CNN
-	1    2050 6300
-	0    1    1    0   
-$EndComp
 Text Label 1450 6300 0    50   ~ 0
 3V3_BUCK
 Wire Wire Line
 	3200 5800 3200 6300
 Wire Wire Line
 	3200 6300 2500 6300
-Connection ~ 2200 6300
 Wire Wire Line
 	1900 6300 1450 6300
-Connection ~ 1900 6300
 Wire Wire Line
 	2200 6300 2200 6800
 Wire Wire Line
@@ -1599,4 +1569,34 @@ Text Label 4200 3000 0    50   ~ 0
 3V3_BUCK
 Wire Wire Line
 	4150 3000 4600 3000
+Connection ~ 2200 6300
+$Comp
+L Device:R R?
+U 1 1 60849483
+P 2050 6300
+AR Path="/60849483" Ref="R?"  Part="1" 
+AR Path="/606146CD/60849483" Ref="R?"  Part="1" 
+AR Path="/60856F71/60849483" Ref="R1"  Part="1" 
+F 0 "R1" H 1900 6250 50  0000 C CNN
+F 1 "10k" H 1900 6350 50  0000 C CNN
+F 2 "Resistors:0603" V 1980 6300 50  0001 C CNN
+F 3 "~" H 2050 6300 50  0001 C CNN
+	1    2050 6300
+	0    1    1    0   
+$EndComp
+Connection ~ 1900 6300
+$Comp
+L Device:R R?
+U 1 1 60849489
+P 2050 6300
+AR Path="/60849489" Ref="R?"  Part="1" 
+AR Path="/606146CD/60849489" Ref="R?"  Part="1" 
+AR Path="/60856F71/60849489" Ref="R2"  Part="1" 
+F 0 "R2" H 1800 6250 50  0000 C CNN
+F 1 "10k" H 1900 6350 50  0000 C CNN
+F 2 "Resistors:0603" V 1980 6300 50  0001 C CNN
+F 3 "~" H 2050 6300 50  0001 C CNN
+	1    2050 6300
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
