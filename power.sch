@@ -564,22 +564,6 @@ F 3 "" H 3700 3300 50  0001 C CNN
 	1    3700 3300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3V3 #PWR?
-U 1 1 6054766C
-P 4150 3000
-AR Path="/606146CD/6054766C" Ref="#PWR?"  Part="1" 
-AR Path="/603B75FA/6054766C" Ref="#PWR?"  Part="1" 
-AR Path="/603BB897/6054766C" Ref="#PWR?"  Part="1" 
-AR Path="/6055B0F2/6054766C" Ref="#PWR?"  Part="1" 
-AR Path="/60856F71/6054766C" Ref="#PWR021"  Part="1" 
-F 0 "#PWR021" H 4150 2850 50  0001 C CNN
-F 1 "+3V3" V 4150 3200 50  0000 C CNN
-F 2 "" H 4150 3000 50  0001 C CNN
-F 3 "" H 4150 3000 50  0001 C CNN
-	1    4150 3000
-	0    1    1    0   
-$EndComp
 Text Notes 3900 3300 0    50   ~ 0
 Feedback resistors for \nAP63200 ADJ. Version
 $Comp
@@ -1611,4 +1595,8 @@ $EndComp
 Connection ~ 5250 4750
 Wire Wire Line
 	5250 4750 5000 4750
+Text Label 4200 3000 0    50   ~ 0
+3V3_BUCK
+Wire Wire Line
+	4150 3000 4600 3000
 $EndSCHEMATC
