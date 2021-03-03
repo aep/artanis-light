@@ -57,6 +57,8 @@ F0 "power" 50
 F1 "power.sch" 50
 F2 "CHARGE_STAT" O R 5000 3100 50 
 F3 "CHARGER_EN" I R 5000 3200 50 
+F4 "IN1_PG" O R 5000 3000 50 
+F5 "IN2_PG" O R 5000 2900 50 
 $EndSheet
 $Comp
 L aep:dummy X1
