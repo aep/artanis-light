@@ -272,44 +272,6 @@ Wire Wire Line
 	2000 7100 2450 7100
 Text GLabel 2450 7100 2    50   Input ~ 0
 MODEM_3.3V
-$Comp
-L aep:MIC94080YFT-TR U?
-U 1 1 6058AF0C
-P 2900 6300
-AR Path="/6058AF0C" Ref="U?"  Part="1" 
-AR Path="/6055B0F2/6058AF0C" Ref="U11"  Part="1" 
-F 0 "U11" H 2900 6767 50  0000 C CNN
-F 1 "MIC94085" H 2900 6676 50  0000 C CNN
-F 2 "aep:IC_MIC94080YFT-TR" H 2900 6300 50  0001 L BNN
-F 3 "" H 2900 6300 50  0001 L BNN
-F 4 "Manufacturer Recommendations" H 2900 6300 50  0001 L BNN "STANDARD"
-F 5 "A" H 2900 6300 50  0001 L BNN "PARTREV"
-F 6 "Microchip Technology" H 2900 6300 50  0001 L BNN "MANUFACTURER"
-F 7 "0.6 mm" H 2900 6300 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
-	1    2900 6300
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 6500 2300 6500
-Wire Wire Line
-	2050 6600 2050 6500
-$Comp
-L power:GND #PWR?
-U 1 1 6058AF14
-P 2050 6600
-AR Path="/6058AF14" Ref="#PWR?"  Part="1" 
-AR Path="/6055B0F2/6058AF14" Ref="#PWR088"  Part="1" 
-F 0 "#PWR088" H 2050 6350 50  0001 C CNN
-F 1 "GND" H 2055 6427 50  0000 C CNN
-F 2 "" H 2050 6600 50  0001 C CNN
-F 3 "" H 2050 6600 50  0001 C CNN
-	1    2050 6600
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2150 6100 2300 6100
-Text GLabel 2150 6100 0    50   Input ~ 0
-MODEM_3.3V
 Text GLabel 5500 6100 2    50   Input ~ 0
 MODEM_3.3V
 Wire Wire Line
@@ -359,16 +321,9 @@ F 3 "~" H 1850 7100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3500 6300 4200 6300
-Wire Wire Line
-	4200 6300 4200 6200
-Wire Wire Line
 	4200 6200 4550 6200
 Wire Wire Line
-	4200 6300 4200 6450
-Wire Wire Line
 	4200 6450 4000 6450
-Connection ~ 4200 6300
 $Comp
 L Device:C C?
 U 1 1 605C9221
@@ -418,8 +373,6 @@ F 3 "" H 1450 6450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1450 6400 1450 6450
-Wire Wire Line
-	3500 6100 3900 6100
 $Comp
 L power:+3V3 #PWR?
 U 1 1 605EC245
@@ -452,7 +405,6 @@ F 3 "" H 1450 7100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1700 7100 1450 7100
-Connection ~ 3900 6100
 Wire Wire Line
 	3900 6100 4550 6100
 $Comp
@@ -977,4 +929,6 @@ Text Label 10050 4400 0    50   ~ 0
 PERST
 Text HLabel 4000 6450 0    50   Input ~ 0
 MODEM_RELAIS
+Wire Wire Line
+	4200 6200 4200 6450
 $EndSCHEMATC

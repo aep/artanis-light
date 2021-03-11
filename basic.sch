@@ -210,20 +210,20 @@ Wire Wire Line
 	5000 3100 5500 3100
 Wire Wire Line
 	5000 3200 5500 3200
-Text GLabel 3200 3550 2    50   Input ~ 0
-VIN_12V
-Wire Wire Line
-	3200 3550 3000 3550
-Wire Wire Line
-	2250 3650 2500 3650
-Text GLabel 2250 3650 0    50   Input ~ 0
-CANL
 Text GLabel 3200 3650 2    50   Input ~ 0
-CANH
+VIN_12V
 Wire Wire Line
 	3200 3650 3000 3650
 Wire Wire Line
-	2500 3550 2250 3550
+	2250 3550 2500 3550
 Text GLabel 2250 3550 0    50   Input ~ 0
+CANL
+Text GLabel 3200 3550 2    50   Input ~ 0
+CANH
+Wire Wire Line
+	3200 3550 3000 3550
+Wire Wire Line
+	2500 3650 2250 3650
+Text GLabel 2250 3650 0    50   Input ~ 0
 VIN_GND
 $EndSCHEMATC

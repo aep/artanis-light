@@ -1258,21 +1258,6 @@ F 3 "" H 9000 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
-U 1 1 60415DFF
-P 9000 2400
-AR Path="/60415DFF" Ref="C?"  Part="1" 
-AR Path="/603B75FA/60415DFF" Ref="C?"  Part="1" 
-AR Path="/606146CD/60415DFF" Ref="C?"  Part="1" 
-AR Path="/60856F71/60415DFF" Ref="C25"  Part="1" 
-F 0 "C25" V 8748 2400 50  0000 C CNN
-F 1 "1nF" V 8839 2400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9038 2250 50  0001 C CNN
-F 3 "~" H 9000 2400 50  0001 C CNN
-	1    9000 2400
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 60434E50
 P 9200 2250
@@ -1287,34 +1272,6 @@ F 3 "" H 9200 2250 50  0001 C CNN
 $EndComp
 $Comp
 L power:GND #PWR?
-U 1 1 6043BA6C
-P 9000 2550
-AR Path="/6043BA6C" Ref="#PWR?"  Part="1" 
-AR Path="/60856F71/6043BA6C" Ref="#PWR034"  Part="1" 
-F 0 "#PWR034" H 9000 2300 50  0001 C CNN
-F 1 "GND" H 9005 2377 50  0000 C CNN
-F 2 "" H 9000 2550 50  0001 C CNN
-F 3 "" H 9000 2550 50  0001 C CNN
-	1    9000 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 6043C455
-P 8950 4050
-AR Path="/6043C455" Ref="C?"  Part="1" 
-AR Path="/603B75FA/6043C455" Ref="C?"  Part="1" 
-AR Path="/606146CD/6043C455" Ref="C?"  Part="1" 
-AR Path="/60856F71/6043C455" Ref="C24"  Part="1" 
-F 0 "C24" V 8698 4050 50  0000 C CNN
-F 1 "1nF" V 8789 4050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 8988 3900 50  0001 C CNN
-F 3 "~" H 8950 4050 50  0001 C CNN
-	1    8950 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
 U 1 1 6043C45B
 P 9150 3900
 AR Path="/6043C45B" Ref="#PWR?"  Part="1" 
@@ -1324,19 +1281,6 @@ F 1 "GND" H 9155 3727 50  0000 C CNN
 F 2 "" H 9150 3900 50  0001 C CNN
 F 3 "" H 9150 3900 50  0001 C CNN
 	1    9150 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6043C461
-P 8950 4200
-AR Path="/6043C461" Ref="#PWR?"  Part="1" 
-AR Path="/60856F71/6043C461" Ref="#PWR033"  Part="1" 
-F 0 "#PWR033" H 8950 3950 50  0001 C CNN
-F 1 "GND" H 8955 4027 50  0000 C CNN
-F 2 "" H 8950 4200 50  0001 C CNN
-F 3 "" H 8950 4200 50  0001 C CNN
-	1    8950 4200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1602,7 +1546,7 @@ AR Path="/606146CD/605AB4FB" Ref="C?"  Part="1"
 AR Path="/603B75FA/605AB4FB" Ref="C?"  Part="1" 
 AR Path="/60856F71/605AB4FB" Ref="C26"  Part="1" 
 F 0 "C26" H 9450 4850 50  0000 C CNN
-F 1 "100nF" H 9450 4750 50  0000 C CNN
+F 1 "10uF" H 9450 4750 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 4700 50  0001 C CNN
 F 3 "~" H 9650 4850 50  0001 C CNN
 	1    9650 4850
@@ -1633,20 +1577,6 @@ Connection ~ 9650 5000
 Wire Wire Line
 	8150 2100 8550 2100
 Connection ~ 8150 2100
-$Comp
-L Connector:TestPoint_Alt TP?
-U 1 1 605DAA2E
-P 9700 2300
-AR Path="/605DAA2E" Ref="TP?"  Part="1" 
-AR Path="/6055B0F2/605DAA2E" Ref="TP?"  Part="1" 
-AR Path="/60856F71/605DAA2E" Ref="TP7"  Part="1" 
-F 0 "TP7" H 9550 2350 50  0000 L CNN
-F 1 "L0" H 9650 2500 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9900 2300 50  0001 C CNN
-F 3 "~" H 9900 2300 50  0001 C CNN
-	1    9700 2300
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 605E1876
@@ -1725,28 +1655,12 @@ Wire Wire Line
 	9700 2100 9650 2100
 Wire Wire Line
 	9700 2300 9900 2300
-Connection ~ 9700 2300
-$Comp
-L Connector:TestPoint_Alt TP?
-U 1 1 606698A5
-P 9650 3950
-AR Path="/606698A5" Ref="TP?"  Part="1" 
-AR Path="/6055B0F2/606698A5" Ref="TP?"  Part="1" 
-AR Path="/60856F71/606698A5" Ref="TP6"  Part="1" 
-F 0 "TP6" H 9500 4000 50  0000 L CNN
-F 1 "L0" H 9600 4150 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9850 3950 50  0001 C CNN
-F 3 "~" H 9850 3950 50  0001 C CNN
-	1    9650 3950
-	-1   0    0    1   
-$EndComp
 Text HLabel 9850 3950 2    50   Output ~ 0
 IN2_PG
 Wire Wire Line
 	9650 3750 9650 3950
 Wire Wire Line
 	9650 3950 9850 3950
-Connection ~ 9650 3950
 $Comp
 L Device:C C?
 U 1 1 60678D0B
