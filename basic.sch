@@ -24,8 +24,6 @@ F 3 "~" H 7150 5900 50  0001 C CNN
 	1    7150 5900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 3550 3000 3550
 $Comp
 L Mechanical:Fiducial FID3
 U 1 1 5E789C24
@@ -37,8 +35,6 @@ F 3 "~" H 7700 5900 50  0001 C CNN
 	1    7700 5900
 	1    0    0    -1  
 $EndComp
-Text GLabel 3200 3550 2    50   Input ~ 0
-VIN_12V
 $Comp
 L Connector_Generic:Conn_02x02_Top_Bottom J1
 U 1 1 5E789BF0
@@ -118,12 +114,6 @@ Wire Wire Line
 	5000 4300 5500 4300
 Wire Wire Line
 	5500 4400 5000 4400
-Text GLabel 3200 3650 2    50   Input ~ 0
-CANH
-Text GLabel 2250 3650 0    50   Input ~ 0
-CANL
-Wire Wire Line
-	3200 3650 3000 3650
 $Sheet
 S 5500 3000 1500 1500
 U 603B75FA
@@ -190,8 +180,6 @@ F 3 "~" H 8200 6150 50  0001 C CNN
 	1    8200 6150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2250 3650 2500 3650
 $Sheet
 S 7500 3600 1000 1000
 U 6055B0F2
@@ -218,12 +206,24 @@ Wire Wire Line
 	7000 4300 7500 4300
 Wire Wire Line
 	7000 4400 7500 4400
-Text GLabel 2250 3550 0    50   Input ~ 0
-VIN_GND
-Wire Wire Line
-	2500 3550 2250 3550
 Wire Wire Line
 	5000 3100 5500 3100
 Wire Wire Line
 	5000 3200 5500 3200
+Text GLabel 3200 3650 2    50   Input ~ 0
+VIN_12V
+Wire Wire Line
+	3200 3650 3000 3650
+Wire Wire Line
+	2250 3550 2500 3550
+Text GLabel 2250 3550 0    50   Input ~ 0
+CANL
+Text GLabel 3200 3550 2    50   Input ~ 0
+CANH
+Wire Wire Line
+	3200 3550 3000 3550
+Wire Wire Line
+	2500 3650 2250 3650
+Text GLabel 2250 3650 0    50   Input ~ 0
+VIN_GND
 $EndSCHEMATC
