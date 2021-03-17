@@ -254,4 +254,8 @@ F 3 "~" H 5200 3950 50  0001 C CNN
 	1    5200 3950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5400 4100 5400 4200
+Connection ~ 5400 4100
+Connection ~ 5400 4200
 $EndSCHEMATC
