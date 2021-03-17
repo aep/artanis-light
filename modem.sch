@@ -832,19 +832,6 @@ Text Label 6650 3600 0    50   ~ 0
 LED_WWAN
 Wire Wire Line
 	6050 3600 7050 3600
-$Comp
-L Connector:TestPoint_Alt TP?
-U 1 1 6054A21C
-P 7050 3600
-AR Path="/6054A21C" Ref="TP?"  Part="1" 
-AR Path="/6055B0F2/6054A21C" Ref="TP10"  Part="1" 
-F 0 "TP10" V 7050 3900 50  0000 L CNN
-F 1 "L0" V 7050 3800 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7250 3600 50  0001 C CNN
-F 3 "~" H 7250 3600 50  0001 C CNN
-	1    7050 3600
-	0    1    1    0   
-$EndComp
 Text Label 2900 5200 0    50   ~ 0
 LED_WWAN
 Wire Wire Line
