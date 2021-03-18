@@ -139,18 +139,15 @@ F 3 "" H 4650 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 6000 4650 6200
-Wire Wire Line
 	4550 6300 4650 6300
 Connection ~ 4650 6300
 Wire Wire Line
 	4650 6300 4650 6400
 Wire Wire Line
 	4550 6200 4650 6200
-Connection ~ 4650 6200
 Wire Wire Line
 	4650 6200 4650 6300
-Text GLabel 4100 6000 0    50   Input ~ 0
+Text GLabel 4800 6000 2    50   Input ~ 0
 softreset
 $Comp
 L Transistor_BJT:MBT3904DW1 Q?
@@ -451,7 +448,7 @@ $EndComp
 Wire Wire Line
 	4550 4800 4100 4800
 Wire Wire Line
-	4100 4900 4550 4900
+	4100 3100 4550 3100
 Text HLabel 4550 4100 2    50   BiDi ~ 0
 TWIO_SCK
 Text HLabel 4550 4000 2    50   BiDi ~ 0
@@ -782,7 +779,7 @@ MODEM_RX
 Text HLabel 4550 3800 2    50   Input ~ 0
 CAN0IRQ
 Wire Wire Line
-	4250 6000 4100 6000
+	4650 6000 4800 6000
 Text HLabel 4550 4300 2    50   Input ~ 0
 CHARGE_STAT
 Text HLabel 4550 3200 2    50   Input ~ 0
@@ -805,7 +802,7 @@ Text HLabel 4550 4700 2    50   Output ~ 0
 MODEM_RESET
 Text Label 4100 4800 0    50   ~ 0
 LED_GREEN
-Text Label 4100 4900 0    50   ~ 0
+Text Label 4100 3100 0    50   ~ 0
 LED_BLUE
 Text Label 2850 6000 0    50   ~ 0
 LED_GREEN
@@ -848,10 +845,24 @@ F 3 "~" H 2500 2800 50  0001 C CNN
 	1    2500 2800
 	0    -1   -1   0   
 $EndComp
-Text HLabel 4550 3100 2    50   Output ~ 0
+Text HLabel 4550 4900 2    50   Output ~ 0
 CHARGER_EN
 Wire Wire Line
-	4100 3100 4550 3100
+	4100 4900 4550 4900
 Wire Wire Line
 	4100 3000 4550 3000
+$Comp
+L power:GND #PWR?
+U 1 1 6056CD42
+P 4250 6000
+AR Path="/603D0BBC/6056CD42" Ref="#PWR?"  Part="1" 
+AR Path="/6056CD42" Ref="#PWR?"  Part="1" 
+AR Path="/603B75FA/6056CD42" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 4250 5750 50  0001 C CNN
+F 1 "GND" H 4255 5827 50  0000 C CNN
+F 2 "" H 4250 6000 50  0001 C CNN
+F 3 "" H 4250 6000 50  0001 C CNN
+	1    4250 6000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
